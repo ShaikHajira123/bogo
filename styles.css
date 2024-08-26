@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 442px;
+    background-color: #ffffff;
+    border: 2px solid #f6f6f6;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    color: #FF6B82;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.offer input[type="radio"] {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+
+.discount {
+    background-color: #FF6B82;
+    color: #fff;
+    padding: 20px 6px;
+    border-radius: 12px 0px 0px 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    min-width: 70px;
+}
+
+.offer .details {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    padding: 5px;
+}
+
+.offer .price {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.most-popular {
+    color: #FF6B82;
+    font-size: 14px;
+    font-weight: 600;
+    padding-right: 80px;
+}
+
+.best-offer {
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+}
+
+.best-offer .offer-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.firstdiv {
+    margin-bottom: 8px;
+}
+
+.offer-price {
+    font-weight: 600;
+}
+
+.selected {
+    background-color: #FFF9FA;
+    border: 2px solid #FF6B82;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.best-offer .discount1 {
+    background-color: #FF6B82;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.best-offer .old-price {
+    text-decoration: line-through;
+    color: #b5b5b5;
+    font-size: 12px;
+}
+
+.selectors select {
+    width: 100%;
+    padding: 4px;
+    border-radius: 2px;
+    color: #333;
+}
+
+.selectors select option {
+    padding: 8px;
+    /* Option padding */
+}
+
+.totalBill {
+    justify-content: space-between;
+    display: flex;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.totalBill .free-delivery {
+    color: #FF6B82;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    display: block;
+    width: 100%;
+    background-color: #FF6B82;
+
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.powered-by {
+    text-align: center;
+    color: #b5b5b5;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin-bottom: 2px;
+}
+
+
+th {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+}
+
+td {
+    font-size: 12px;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    /* Hide the default radio button */
+}
+
+.radio-label {
+    position: relative;
+    display: inline-block;
+    width: 14.46px;
+    height: 14.46px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.radio-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 9.04px;
+    height: 9.04px;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked+.radio-label::after {
+    background-color: #FF6B82;
+}
+
+input[type="radio"]:checked+.radio-label {
+    border: 1px solid #FF6B82;
+}
+
+.visible {
+    display: visible !important;
+    margin: 20px;
+}
+
+.hideTable {
+    display: none;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .offer .details {
+        font-size: 14px;
+    }
+
+    .best-offer .offer-header {
+        font-size: 14px;
+    }
+
+    .best-offer .selectors {
+        width: 100%;
+    }
+
+    .add-to-cart {
+        padding: 15px;
+    }
+}
